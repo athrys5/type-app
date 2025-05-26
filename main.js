@@ -27,8 +27,15 @@ function renderWords() {
   elements.forEach((el) => container.appendChild(el));
 }
 
+function checkSingleWord(value) {}
 function startButton() {
-  set;
+  const typingInput = document.getElementById("typing-input");
+  let _currentWordIndex = 0;
+
+  typingInput.addEventListener("input", (event) => {
+    const typedWords = event.target.value;
+    checkSingleWord(typedWords);
+  });
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
